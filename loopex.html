@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Start End Program</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(135deg, #dbeafe, #ede9fe);
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: white;
+
+            width: 450px;
+
+            padding: 35px;
+
+            border-radius: 15px;
+
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+
+            text-align: center;
+        }
+
+        h1 {
+            color: #2563eb;
+
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            text-align: left;
+
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+
+            color: #334155;
+        }
+
+        input {
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #cbd5e1;
+
+            border-radius: 8px;
+
+            font-size: 16px;
+
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+
+            box-shadow: 0px 0px 5px rgba(37, 99, 235, 0.3);
+        }
+
+        button {
+            width: 100%;
+
+            padding: 13px;
+
+            margin-top: 5px;
+
+            background-color: #2563eb;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 8px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        .display {
+            margin-top: 25px;
+
+            text-align: left;
+        }
+
+        .display input {
+            background-color: #f8fafc;
+
+            color: #16a34a;
+
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="container">
+
+        <h1>Start End Program</h1>
+
+
+        <div class="input-group">
+
+            <label>Enter Start:</label>
+
+            <input
+                type="number"
+                id="start"
+                placeholder="Enter start number"
+            >
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label>Enter End:</label>
+
+            <input
+                type="number"
+                id="end"
+                placeholder="Enter end number"
+            >
+
+        </div>
+
+
+        <button onclick="displayNumbers()">
+            DISPLAY
+        </button>
+
+
+        <div class="display">
+
+            <label>Display:</label>
+
+            <input
+                type="text"
+                id="display"
+                readonly
+            >
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        function displayNumbers() {
+
+            let start =
+                parseInt(document.getElementById("start").value);
+
+            let end =
+                parseInt(document.getElementById("end").value);
+
+            let result = "";
+
+            for (let i = start; i <= end; i = i + 1) {
+
+                result = result + i + " ";
+
+            }
+
+            document.getElementById("display").value = result;
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+
